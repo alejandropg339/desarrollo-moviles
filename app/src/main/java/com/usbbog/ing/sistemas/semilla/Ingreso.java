@@ -8,11 +8,15 @@ import android.view.View;
 import android.widget.Toast;
 
 public class Ingreso extends AppCompatActivity {
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingreso);
+        String titulo  = getIntent().getStringExtra("user");
+        this.setTitle(titulo);
+
     }
 
     public void registrar(View view){

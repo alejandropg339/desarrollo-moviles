@@ -2,27 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/te"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".Ingreso">
+    tools:context=".IngresoUsuario">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09"
         app:srcCompat="@drawable/loguito" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="291dp"
         android:layout_height="83dp"
         android:layout_marginStart="32dp"
@@ -32,77 +31,56 @@
         android:textAlignment="inherit"
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
-        android:id="@+id/IrRegistrar"
+        android:id="@+id/reportes"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="304dp"
         android:background="@drawable/button_rounded"
-        android:onClick="registrar"
-        android:text="Registar Producto"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/irEliminar"
-        android:layout_width="192dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="232dp"
-        android:background="@drawable/button_rounded"
-        android:onClick="eliminar"
-        android:text="Eliminar Producto"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/irActualizar"
-        android:layout_width="192dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="164dp"
-        android:background="@drawable/button_rounded"
-        android:onClick="actualizar"
-        android:text="Actualizar Producto"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/irInventario"
-        android:layout_width="192dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/button_rounded"
-        android:onClick="inventario"
-        android:text="Inventario"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/irReportes"
-        android:layout_width="192dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/button_rounded"
-        android:onClick="reportes"
+        android:onClick="reportesFinal"
         android:text="Reportes"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
+
+    <Button
+        android:id="@+id/inventario"
+        android:layout_width="192dp"
+        android:layout_height="42dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="inventariFinal"
+        android:text="Inventario"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618" />
+
+    <Button
+        android:id="@+id/datosPersonales"
+        android:layout_width="192dp"
+        android:layout_height="42dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="datosPersonalesFinal"
+        android:text="Datos Personales"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
