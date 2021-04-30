@@ -48,4 +48,9 @@ public class IngresoUsuario extends AppCompatActivity {
         a1.putExtra("pass",pass);
         startActivity(a1);
     }
+
+    public void logOut(View view){
+        Intent ir1 = new Intent(this, Login.class);
+        startActivity(ir1);
+    }
 }

@@ -54,4 +54,9 @@ public class Ingreso extends AppCompatActivity {
         startActivity(ir1);
     }
 
+    public void logOut(View view){
+        Intent ir1 = new Intent(this, Login.class);
+        startActivity(ir1);
+    }
+
 }
