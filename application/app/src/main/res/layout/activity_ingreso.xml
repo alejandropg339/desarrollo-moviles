@@ -40,7 +40,6 @@
         android:id="@+id/IrRegistrar"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="304dp"
         android:background="@drawable/button_rounded"
         android:onClick="registrar"
         android:text="Registar Producto"
@@ -48,13 +47,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
 
     <Button
         android:id="@+id/irEliminar"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="232dp"
         android:background="@drawable/button_rounded"
         android:onClick="eliminar"
         android:text="Eliminar Producto"
@@ -62,13 +62,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651" />
 
     <Button
         android:id="@+id/irActualizar"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="164dp"
         android:background="@drawable/button_rounded"
         android:onClick="actualizar"
         android:text="Actualizar Producto"
@@ -76,13 +77,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
 
     <Button
         android:id="@+id/irInventario"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="100dp"
         android:background="@drawable/button_rounded"
         android:onClick="inventario"
         android:text="Inventario"
@@ -90,13 +92,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
 
     <Button
         android:id="@+id/irReportes"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="40dp"
         android:background="@drawable/button_rounded"
         android:onClick="reportes"
         android:text="Reportes"
@@ -104,5 +107,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
 </androidx.constraintlayout.widget.ConstraintLayout>

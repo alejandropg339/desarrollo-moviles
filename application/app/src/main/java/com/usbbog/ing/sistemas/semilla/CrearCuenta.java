@@ -36,7 +36,7 @@ public class CrearCuenta extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ingresar("http://192.168.1.107:80/desarrollo-moviles/server/create-user.php?nombre="+campoNombre.getText().toString()+"&cedula="+Integer.parseInt(campoCedula.getText().toString())+"&correo="+campoCorreo.getText().toString()+"&telefono="+Integer.parseInt(campoTelefono.getText().toString())+"&username="+campoCedula.getText().toString()+"&contrasena="+campoCedula.getText().toString());
+                ingresar("http://192.168.0.2:80/desarrollo-moviles/server/create-user.php?nombre="+campoNombre.getText().toString()+"&cedula="+Integer.parseInt(campoCedula.getText().toString())+"&correo="+campoCorreo.getText().toString()+"&telefono="+Integer.parseInt(campoTelefono.getText().toString())+"&username="+campoCedula.getText().toString()+"&contrasena="+campoCedula.getText().toString());
             }
         });
     }

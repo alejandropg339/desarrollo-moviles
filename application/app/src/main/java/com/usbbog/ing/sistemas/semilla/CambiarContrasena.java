@@ -42,7 +42,7 @@ public class CambiarContrasena extends AppCompatActivity {
         dataArea = (TextView) findViewById(R.id.dataArea);
         passInput = (EditText) findViewById(R.id.passInput);
 
-        dataQuery = (Button) findViewById(R.id.dataQuery);
+        dataQuery = (Button) findViewById(R.id.mi_lista);
         changePassword = (Button) findViewById(R.id.changePassword);
 
         dataArea.setText(user+password);
@@ -50,7 +50,7 @@ public class CambiarContrasena extends AppCompatActivity {
        dataQuery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                consultData("http://192.168.1.107:80/desarrollo-moviles/server/update-password.php?user="+user+"&password="+password);
+                consultData("http://192.168.0.2:80/desarrollo-moviles/server/querys-usuario.php?user="+user+"&password="+password);
                 Toast.makeText(getApplicationContext(), "Usuario: "+user+" Password: " +password, Toast.LENGTH_SHORT).show();
             }
         });
@@ -58,7 +58,7 @@ public class CambiarContrasena extends AppCompatActivity {
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changePass("http://192.168.1.107:80/desarrollo-moviles/server/update-password.php?newPass="+passInput.getText().toString()+"&username="+user+"&password="+password);
+                changePass("http://192.168.0.2:80/desarrollo-moviles/server/update-password.php?newPass="+passInput.getText().toString()+"&username="+user+"&password="+password);
             }
         });
     }
