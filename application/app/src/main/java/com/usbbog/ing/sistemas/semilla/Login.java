@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ingresar("http://192.168.0.2:80/semilla-movil/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString());
+                ingresar("http://192.168.1.107:80/desarrollo-moviles/server/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString());
             }
         });
 
@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
 
     private void ingresar(String URL){
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
-            String link = "http://192.168.0.2:80/semilla-movil/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString();
+            String link = "http://192.168.1.107:80/desarrollo-moviles/server/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString();
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
@@ -83,6 +83,10 @@ public class Login extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+    public void crearCuenta(View view){
+        Intent a1 = new Intent(this, CrearCuenta.class);
+        startActivity(a1);
+    }
 
     private void ejecutarConsulta(String URL){
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
@@ -171,4 +175,6 @@ public class Login extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
     }
+
+
 }
