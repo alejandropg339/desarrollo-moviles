@@ -13,3 +13,6 @@ $result = mysqli_query($conection,$queryUpdate);
 if($result){
     echo "operación exitosa";
 }
+
+mysqli_close($conection);
+?>

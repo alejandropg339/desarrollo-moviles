@@ -21,3 +21,5 @@ if($result){
     echo "Operación exitosa";
 }
 
+mysqli_close($conection);
+?>
