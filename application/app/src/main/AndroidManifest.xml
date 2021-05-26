@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CrearCuenta"></activity>
+        <activity android:name=".Version"></activity>
+        <activity android:name=".Creadores" />
+        <activity android:name=".CrearCuenta" />
         <activity android:name=".CambiarContrasena" />
         <activity android:name=".IngresoUsuario" />
         <activity android:name=".Reportes" />

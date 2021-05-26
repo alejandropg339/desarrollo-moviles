@@ -1,7 +1,9 @@
 package com.usbbog.ing.sistemas.semilla;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -42,7 +44,7 @@ public class Login extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ingresar("http://192.168.0.2:80/desarrollo-moviles/server/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString());
+                ingresar("http://192.168.1.103:3000/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString());
             }
         });
 
@@ -63,7 +65,7 @@ public class Login extends AppCompatActivity {
 
     private void ingresar(String URL){
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
-            String link = "http://192.168.0.2:80/desarrollo-moviles/server/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString();
+            String link = "http://192.168.1.103:3000/querys-usuario.php?user="+user.getText().toString()+"&password="+password.getText().toString();
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
@@ -177,5 +179,27 @@ public class Login extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
     }
 
+    public void alertOneButton(){
+        new AlertDialog.Builder(Login.this).setTitle("Cerrar app").setMessage("Esta seguro que desea cerra la aplicación?")
+                .setPositiveButton("Si",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id){
+                                Intent intent = new Intent(Intent.ACTION_MAIN);
+                                intent.addCategory(Intent.CATEGORY_HOME);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                finish();
+                            }
+                        })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                }).show();
+    }
 
+    public void onBackPressed(){
+        alertOneButton();
+    }
 }

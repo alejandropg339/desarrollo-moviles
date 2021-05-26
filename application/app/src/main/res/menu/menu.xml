@@ -5,8 +5,12 @@
     tools:context=".Menu_Overflow">
 
     <item android:id="@+id/login"
-        android:title="Login"/>
+        android:title="Cerrar Sesion"/>
 
-    <item android:id="@+id/crearCuenta"
-        android:title="Crear cuenta"/>
+    <item android:id="@+id/creadores"
+        android:title="Desarrollado por:"/>
+
+    <item android:id="@+id/version"
+        android:title="Versión"/>
+
 </menu>

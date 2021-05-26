@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+
+    #docker run -dp 3000:3000 --network todo-app -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos getting-started:v2
+    
+      app:
+        image: semilla
+        ports:
+          - 3000:80
+        environment:
+          MYSQL_HOST: mysql
+          MYSQL_USER: root
+          MYSQL_PASSWORD: password
+          MYSQL_DB: spmn_db
+        links: 
+          - mysql:mysql
+      
+    # docker run -d     --network todo-app --network-alias mysql     -v todo-mysql-data:/var/lib/mysql     -e MYSQL_ROOT_PASSWORD=secret     -e MYSQL_DATABASE=todos     mysql:5.7
+    
+      mysql:
+        image: mysql:5.7
+        ports: 
+          - 3307:3306
+        volumes:
+          - /home/jefferson/Documentos/repos/desarrollo-moviles/database/data:/var/lib/mysql 
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: spmn_db
